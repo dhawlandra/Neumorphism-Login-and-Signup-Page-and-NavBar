@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neumorphism Home Page</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="navbar-brand">MyBrand</div>
+        <div class="navbar-links">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <div class="search-container">
+            <input type="text" placeholder="Search" class="search-input" />
+            <button class="search-button">🔍</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="container">
+      <div class="flip-card">
+        <div class="flip-card-inner" id="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="card">
+              <h2>Login</h2>
+              <input type="text" placeholder="Username" class="input-field" />
+              <input
+                type="password"
+                placeholder="Password"
+                class="input-field"
+              />
+              <button class="button">Login</button>
+              <p class="switch-text">
+                Don't have an account?
+                <span class="switch-btn" onclick="flipCard()">Signup</span>
+              </p>
+            </div>
+          </div>
+          <div class="flip-card-back">
+            <div class="card">
+              <h2>Signup</h2>
+              <input type="text" placeholder="Username" class="input-field" />
+              <input
+                type="password"
+                placeholder="Password"
+                class="input-field"
+              />
+              <input type="email" placeholder="Email" class="input-field" />
+              <button class="button">Signup</button>
+              <p class="switch-text">
+                Already have an account?
+                <span class="switch-btn" onclick="flipCard()">Login</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="social-icons">
+        <a href="#" class="social-icon">👍</a>
+        <a href="#" class="social-icon">🐦</a>
+        <a href="#" class="social-icon">📸</a>
+        <a href="#" class="social-icon">🔗</a>
+      </div>
+    </footer>
+    <script>
+      function flipCard() {
+        const flipCardInner = document.getElementById("flip-card-inner");
+        flipCardInner.classList.toggle("flipped");
+      }
+    </script>
+  </body>
+</html>
